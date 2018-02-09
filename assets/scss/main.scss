@@ -1,0 +1,76 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.7;
+  color: #777;
+}
+
+.main-section {
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1509098681029-b45e9c845022?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=928cdaeb7b1758a4b74bc6c138e46b9e&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+}
+
+.button {
+
+  &:visited,
+  &:link {
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    padding:20px 30px;
+    border-radius: .5rem;
+    display: inline-block;
+    transition: all .3s;
+  }
+
+  span {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+.playing {
+  background-color: pink;
+  transform: scale(1.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+
+
+.main-section__buttons {
+  max-width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.button-container {
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+}
+
+.button-clicked {
+  transform: scale(1.5);
+  background-color: pink;
+}
